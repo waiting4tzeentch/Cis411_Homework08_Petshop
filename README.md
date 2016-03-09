@@ -1,5 +1,5 @@
 
-# Cis411_Homework07_Petshop
+# Cis411_Homework08_Petshop
 Designing a simple web store using MVC. 
 
 Assignment details: 
