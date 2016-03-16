@@ -11,29 +11,25 @@ namespace Cis411_Homework08_Petshop.Models
     {
         public Int32 AnimalID { get; set; }
 
+        [Required()]
+        public String AnimalName { get; set; }
 
         [DisplayName("Animal Species")]
         [Required()]
-        [StringLength(maximumLength: 20, MinimumLength =3)]
+        [StringLength(maximumLength: 20, MinimumLength = 3)]
         public String AnimalSpecies { get; set; }
 
         [DisplayName("Animal Description")]
-        public String AnimalDescrition { get; set; }
+        public String AnimalDescription { get; set; }
 
         [Required()]
-        public List<SubSpecies> SubSpecies { get; set; }
-    }
-
-    public class SubSpecies : Animal
-    {
-        public Int32 SpeciesID { get; set; }
+        [StringLength(maximumLength: 20, MinimumLength = 3)]
+        [DisplayName("Subspecies")]
+        public String SubSpecies { get; set; }
 
         [Required()]
-        [DisplayName("Breed Name")]
-        public String SpeciesName { get; set; }
-
-        [Required()]
-        [DisplayName("Species Description")]
-        public String SpeciesDescription { get; set; }
+        [DataType(DataType.Currency)]
+        [DisplayName("Price")]
+        public float Price { get; set; }
     }
 }
